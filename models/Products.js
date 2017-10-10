@@ -29,13 +29,25 @@ class Product {
     this.price = price;
     this._collection = [];
   }
-  
+
 get(id){
     // find obj in _collection with id === id
 
     // return found obj. typeof === object 
+  }
 
+  post(id){
+    
+
+  }
   
+  put(id){
+
+
+  }
+
+  delete(id){
+
   }
 }
 

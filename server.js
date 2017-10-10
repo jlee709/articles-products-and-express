@@ -1,25 +1,10 @@
 //jshint esversion:6
 
-//vars
 const express = require('express');
-const server = require('server');
+const port = process.env.PORT || 8080;
 const methodOverride = require('method-override');
 const exphbs  = require('express-handlebars');
 const app = express();
-
-//myLibs
-const Articles = require('./models/Articles');
-const articles = new Articles();
-
-//App uses --!!!
-app.use(methodOverride('_method'));
-
-app.engine('.hbs', exphbs({defaultLayout: 'main',
-extname: '.hbs'
-}));
-
-app.set('view engine', '.hbs');
-
 
 
 //Routes Main 
@@ -48,3 +33,8 @@ app.delete('/article:id', (req, res) => {
   res.send('this is DELETE');
 });
 
+
+//port server end 
+app.listen(port, () => {
+  console.log(`server listening on: ${port}`);
+});
