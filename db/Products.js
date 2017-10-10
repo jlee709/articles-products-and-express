@@ -21,7 +21,6 @@
 //   - If **successful** then redirect the user back to the `/products` page and some way to communicate to the user that this action was successful.
 //   - If not **successful** then send the user back to the **new** article route, `/products/:id`, where `:id` is the product that was just edited and a message that this action was unsucessful.
 
-
 class Product {
   constructor(name, id, price) {
     this.user = user;

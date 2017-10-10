@@ -31,7 +31,7 @@ class Article {
     this.user = user;
     this.id = id;
   }
-  get(id){
+   getAllArticles(){
     // find obj in _collection with id === id
     for(var i = 0; i<id.length; i++){
       if(id[i] === id){
@@ -39,17 +39,19 @@ class Article {
       }
     }
     // return found obj. typeof === object 
-  }post(id){
+  }
+  
+  getSingleArticle(id){
     
 
   }
   
-  put(id){
+  updateArticle(id){
 
 
   }
 
-  delete(id){
+  deleteArticle(id){
 
   }
 }
