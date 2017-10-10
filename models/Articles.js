@@ -31,6 +31,27 @@ class Article {
     this.user = user;
     this.id = id;
   }
+  get(id){
+    // find obj in _collection with id === id
+    for(var i = 0; i<id.length; i++){
+      if(id[i] === id){
+        return id;
+      }
+    }
+    // return found obj. typeof === object 
+  }post(id){
+    
+
+  }
+  
+  put(id){
+
+
+  }
+
+  delete(id){
+
+  }
 }
 
 module.exports = Article;

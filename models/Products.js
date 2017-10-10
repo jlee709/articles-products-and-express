@@ -23,21 +23,23 @@
 
 
 class Product {
-  constructor(user, id) {
+  constructor(name, id, price) {
     this.user = user;
     this.id = id;
+    this.price = price;
     this._collection = [];
   }
-
-  get(id){
+  
+get(id){
     // find obj in _collection with id === id
 
     // return found obj. typeof === object 
 
+  
   }
 }
 
-module.exports = Products;
+module.exports = Product;
 
 
 
