@@ -11,20 +11,21 @@ const app = express();
 const Articles = require('./models/Articles');
 const articles = new Articles();
 
-//App uses --!!!
-app.use(methodOverride('_method'));
 
-app.engine('.hbs', exphbs({defaultLayout: 'main',
-extname: '.hbs'
-}));
+// //App uses --!!!
+// app.use(methodOverride('_method'));
 
-app.set('view engine', '.hbs');
+// app.engine('.hbs', exphbs({defaultLayout: 'main',
+// extname: '.hbs'
+// }));
+
+// app.set('view engine', '.hbs');
 
 
 
 //Routes Main 
 app.get('/', (req, res) => {
-  res.render('../views/partials/home.hbs');
+  // res.render('./views/partials/home.hbs');
 });
 
 app.get('/articles', (req, res) => {

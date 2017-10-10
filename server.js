@@ -7,6 +7,17 @@ const exphbs  = require('express-handlebars');
 const app = express();
 
 
+
+
+//App uses --!!!
+app.use(methodOverride('_method'));
+
+app.engine('.hbs', exphbs({defaultLayout: 'main',
+extname: '.hbs'
+}));
+
+app.set('view engine', '.hbs');
+
 //Routes Main 
 app.get('/', (req, res) => {
   res.render('../views/partials/home.hbs');
@@ -32,6 +43,7 @@ app.put('/article:id', (req, res) => {
 app.delete('/article:id', (req, res) => {
   res.send('this is DELETE');
 });
+
 
 
 //port server end 
