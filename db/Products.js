@@ -23,7 +23,7 @@
 
 class Product {
   constructor(name, id, price) {
-    this.user = user;
+    this.name = name;
     this.id = id;
     this.price = price;
     this._collection = [];
