@@ -2,7 +2,7 @@
 
 //express dependencies 
 const express = require('express');
-const port = process.env.PORT || 8080;
+const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const exphbs  = require('express-handlebars');
 const app = express();
@@ -31,7 +31,10 @@ app.get('/', (req, res) => {
   res.render('../views/partials/home.hbs');
 });
 
-//port server end 
-app.listen(port, () => {
-  console.log(`server listening on: ${port}`);
-});
+// //port server end 
+// app.listen(port, () => {
+//   console.log(`server listening on: ${port}`);
+// });
+
+
+module.exports = app;
