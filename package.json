@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jlee709/articles-products-and-express#readme",
   "dependencies": {
+    "express": "^4.16.1",
     "express-handlebars": "^3.0.0"
   }
 }
