@@ -19,12 +19,12 @@ class Article {
   
   
   updateArticle(id){
-  for(let i = 0; i<_collection.length; i++){
-    if(this._collection[i].id === this.id){
-      console.log("update the product");
+    // if the id matchs what needs to be updated 
+    //updated article
+
     }
-  }
- }
+  
+ 
 
   deleteArticle(title){
     // need to delete and redirect to the articles page *new

@@ -51,10 +51,14 @@ class Products {
 
   //delte
   delete(id){
-    console.log('delete this product');
-
+    for(let i = 0; i<_collection.length; i++){
+       if(this._collection[i].id === this.id){
+         splice(this._collection[i].id, 1);
+       }
+    }
   }
-}
+}// end of class 
+  
 
 module.exports = Products;
 
