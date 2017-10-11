@@ -1,0 +1,27 @@
+
+<form class="form-inline form-fold" id="sites-custom">
+  <div class="form-group">
+    <label for="subjects">Subject</label>
+    <select class="form-control thin">
+      {{#each subjects as |subject|}}
+        <option>{{subject}}</option>
+      {{/each}}
+    </select>
+    <label for="board">Exam Board</label>
+    <select class="form-control thin">
+      {{#each boards as |board|}}
+        <option>{{board}}</option>
+      {{/each}}
+    </select>
+  </div>
+  {{#if extraInfo}}
+  <div class="form-group">
+    <label for="board">Stars</label>
+    <select class="form-control thin">
+      {{#each stars as |star|}}
+        <option>{{star}}</option>
+      {{/each}}
+    </select>
+  </div>
+  {{/if}}
+</form>

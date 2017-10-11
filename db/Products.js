@@ -25,10 +25,10 @@
 //post
 class Products {
   constructor(collection) {
-    this._collection = collection|| [];
+    this._collection = collection || [];
   }
 //post
-  createProduct(name, price, inventory){
+  createProduct(name, price){
     //create product for 
     let newProduct = {
       name: name,
@@ -36,7 +36,10 @@ class Products {
       id: ++this.id
     };
     this._collection.push(newProduct);
+    return newProduct;
   }
+
+  
   //put
   updateProduct(id){
     for(let i = 0; i<_collection.length; i++){
@@ -48,7 +51,18 @@ class Products {
   //delte
   delete(id){
     console.log('delete this product');
+
   }
 }
 
 module.exports = Products;
+
+
+
+
+
+
+
+
+
+
