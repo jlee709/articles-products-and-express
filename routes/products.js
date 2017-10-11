@@ -9,7 +9,11 @@ router.get('/', (req, res) => {
   res.send('smoke test');
 });
 
-router.post('/new', (req, res) => {
+router.get('/new', (req, res) => {
+  res.render('products/new'); //always shows perspective from view folder 
+});
+
+router.post('/', (req, res) => {
   res.send(products.createProduct(req.body.name, req.body.price));
 
   if(truthy){
@@ -23,16 +27,16 @@ router.post('/new', (req, res) => {
   }
 });
 
-router.post('/:id/edit', (req, res) => {
- // let foundProduct = products.get(id);
- res.send();
-});
-
-router.put('/:id/edit', (req, res) => {
+router.get('/:id/edit', (req, res) => {
   res.send('this is PUT');
 });
 
-router.delete('/:id/delete', (req, res) => {
+router.put('/:id', (req, res) => {
+  //update things here 
+});
+
+
+router.delete('/:id', (req, res) => {
   res.send('this is DELETE');
 });
 
