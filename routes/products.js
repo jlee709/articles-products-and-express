@@ -9,31 +9,31 @@ router.get('/', (req, res) => {
   res.send('smoke test');
 });
 
-
 router.post('/new', (req, res) => {
   res.send(products.createProduct(req.body.name, req.body.price));
-  // if(truthy){
-  //   res.send(products.createProduct(req.body.name, req.body.price));
-  // }
-  // else{
-  //   res.redirect('/');
-  // }
+
+  if(truthy){
+
+    res.send(products.createProduct(req.body.name, req.body.price));
+  }
+
+  else{
+
+    res.redirect('/');
+  }
 });
 
+router.post('/:id/edit', (req, res) => {
+ // let foundProduct = products.get(id);
+ res.send();
+});
 
-// router.post('/:id', (req, res) => {
+router.put('/:id/edit', (req, res) => {
+  res.send('this is PUT');
+});
 
-//  // let foundProduct = products.get(id);
-//  res.send();
-// });
-
-// router.put('/:id/edit', (req, res) => {
-//   res.send('this is PUT');
-// });
-
-// router.delete('/:id/', (req, res) => {
-//   res.send('this is DELETE');
-// });
-
+router.delete('/:id/delete', (req, res) => {
+  res.send('this is DELETE');
+});
 
 module.exports = router;

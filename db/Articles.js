@@ -9,7 +9,7 @@ class Article {
   }
 
 
-  createArticle(user,id,descr){
+  createArticle(user, id, description){
     let newArticle = {
       user: id,
       description: description
@@ -26,8 +26,8 @@ class Article {
   }
  }
 
-  deleteArticle(id){
-
+  deleteArticle(title){
+    // need to delete and redirect to the articles page *new
   }
 }
 

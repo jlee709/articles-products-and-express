@@ -27,6 +27,7 @@ class Products {
   constructor(collection) {
     this._collection = collection || [];
   }
+  
 //post
   createProduct(name, price){
     //create product for 
@@ -39,15 +40,15 @@ class Products {
     return newProduct;
   }
 
-  
   //put
-  updateProduct(id){
+  updateProduct(){
     for(let i = 0; i<_collection.length; i++){
       if(this._collection[i].id === this.id){
         console.log("update the product");
       }
     }
   }
+
   //delte
   delete(id){
     console.log('delete this product');

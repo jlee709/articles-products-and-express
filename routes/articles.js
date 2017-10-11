@@ -16,14 +16,13 @@ router.post('/:title', (req, res) => {
 });
 
 
-router.put('/:title', (req, res) => {
+router.put('/:title/edit', (req, res) => {
   res.send('this is PUT');
 });
 
 
-router.delete('/:title', (req, res) => {
+router.delete('/:title/delete', (req, res) => {
   res.send('this is DELETE');
 });
-
 
 module.exports = router;
