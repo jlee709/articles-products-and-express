@@ -10,9 +10,14 @@ router.get('/', (req, res) => {
 });
 
 router.post('/:id', (req, res) => {
+  res.send(reateProduct());
+});
+
+router.post('/:id', (req, res) => {
 
  let foundProduct = products.get(id);
- res.send('this is POST');
+ res.send();
+
 });
 
 

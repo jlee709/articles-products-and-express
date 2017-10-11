@@ -21,41 +21,34 @@
 //   - If **successful** then redirect the user back to the `/products` page and some way to communicate to the user that this action was successful.
 //   - If not **successful** then send the user back to the **new** article route, `/products/:id`, where `:id` is the product that was just edited and a message that this action was unsucessful.
 
-class Product {
-  constructor(name, id, price) {
-    this.name = name;
-    this.id = id;
-    this.price = price;
-    this._collection = [];
+
+//post
+class Products {
+  constructor(collection) {
+    this._collection = collection|| [];
   }
-
-get(id){
-    // find obj in _collection with id === id
-
-    // return found obj. typeof === object 
+//post
+  createProduct(name, price, inventory){
+    //create product for 
+    let newProduct = {
+      name: name,
+      price: price,
+      id: ++this.id
+    };
+    this._collection.push(newProduct);
   }
-
-  post(id){
-    
-
+  //put
+  updateProduct(id){
+    for(let i = 0; i<_collection.length; i++){
+      if(this._collection[i].id === this.id){
+        console.log("update the product");
+      }
+    }
   }
-  
-  put(id){
-
-
-  }
-
+  //delte
   delete(id){
-
+    console.log('delete this product');
   }
 }
 
-module.exports = Product;
-
-
-
-
-
-
-
-
+module.exports = Products;
