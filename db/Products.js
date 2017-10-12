@@ -45,6 +45,11 @@ class Products {
     for(let i = 0; i<_collection.length; i++){
       if(this._collection[i].id === this.id){
         console.log("update the product");
+        let newProduct = {
+        name: name,
+        price: price,
+        id: ++this.id
+      };
       }
     }
   }
@@ -58,7 +63,6 @@ class Products {
     }
   }
 }// end of class 
-  
 
 module.exports = Products;
 

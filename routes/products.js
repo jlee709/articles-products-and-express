@@ -5,18 +5,33 @@ const router = express.Router();
 const Products = require('../db/Products');
 const products = new Products();
 
-router.get('/', (req, res) => {
-  res.send('smoke test');
+//smoke test 
+router.get('/all', (req, res) => {
+  let allProducts = collection;
+  res.render('products/all',allProducts);
 });
 
+// get new products page request
 router.get('/new', (req, res) => {
-  res.render('products/new'); //always shows perspective from view folder 
+  let newData = {
+    Name: "Name : ",
+    Price: "Price : ",
+    Inventory: "Inventory : "
+  };
+  res.render('products/new', newData); //always shows perspective from view folder 
 });
 
+// get update page 
 router.get('/update', (req, res) => {
-  res.render('products/update'); //always shows perspective from view folder 
+  let updateData = {
+    Name: "Name : ",
+    Price: "Price : ",
+    Inventory: "inventory : "
+  };
+  res.render('products/update', updateData); //always shows perspective from view folder 
 });
 
+//posting data for create product
 router.post('/', (req, res) => {
   res.send(products.createProduct(req.body.name, req.body.price));
 
