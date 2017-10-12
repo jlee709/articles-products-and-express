@@ -19,12 +19,8 @@ class Article {
   
   
   updateArticle(id){
-    // if the id matchs what needs to be updated 
-    //updated article
-
+    
     }
-  
- 
 
   deleteArticle(title){
     // need to delete and redirect to the articles page *new

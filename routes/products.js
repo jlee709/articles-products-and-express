@@ -13,6 +13,10 @@ router.get('/new', (req, res) => {
   res.render('products/new'); //always shows perspective from view folder 
 });
 
+router.get('/update', (req, res) => {
+  res.render('products/update'); //always shows perspective from view folder 
+});
+
 router.post('/', (req, res) => {
   res.send(products.createProduct(req.body.name, req.body.price));
 
@@ -28,7 +32,7 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id/edit', (req, res) => {
-  res.send('this is PUT');
+  res.render('this is PUT');
 });
 
 router.put('/:id', (req, res) => {
