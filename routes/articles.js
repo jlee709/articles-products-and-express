@@ -7,9 +7,11 @@ const router = express.Router();
 const articles = require('../routes/articles');
 const app = express();
 
+const dbArticles = require('./db/articles');
+
 
 //Article routes 
 
 app.get('/', (req, res) => {
-  res.render('/', Articles);
+  res.render('/', dbArticles);
 });
