@@ -4,14 +4,20 @@
 
 const express = require('express');
 const router = express.Router();
-const articles = require('../routes/articles');
 const app = express();
 
-const dbArticles = require('./db/articles');
+const Articles = require('../db/articles');
+const articles = new Articles();
 
 
-//Article routes 
-
-app.get('/', (req, res) => {
-  res.render('/', dbArticles);
+// Article routes 
+app.get('/index' , (req,res) => {
+ return  articles.findAll()
+ .then((articles) => {
+    return res.json(articles);
+ });
 });
+
+
+
+// create and post route 
