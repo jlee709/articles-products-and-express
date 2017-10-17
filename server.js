@@ -12,12 +12,27 @@ const pgp = require('pg-promise')();
 const methodOverride = require('method-override');
 
 
+// handle bars 
+let hbs = exhbs.create({
+  extname: '.hbs',
+  defaultLayout: 'main'
+});
+
+app.engine('hbs', hbs.engine);
+app.set('view engine', 'hbs');
+
 // What app will use 
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 app.use(methodOverride('_method'));
+app.use('/articles', articles);
+
+
+
+
+
 
 //port server end 
 app.listen(port, () => {
