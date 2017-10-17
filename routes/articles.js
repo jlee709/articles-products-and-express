@@ -4,13 +4,12 @@
 
 const express = require('express');
 const router = express.Router();
-const Articles = require('../routes/articles');
+const articles = require('../routes/articles');
 const app = express();
 
 
 //Article routes 
 
 app.get('/', (req, res) => {
-  res.render('/', 'views/index.html');
-  
+  res.render('/', Articles);
 });
