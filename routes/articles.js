@@ -12,8 +12,9 @@ const Articles = new articles();
 // Article routes 
 router.get('/' , (req,res) => {
   Articles.findAll()
- .then((articles) => {
-    return res.json(articles);
+ .then((data) => {
+  console.log(data, "ARTICLESSSSSSSSS");
+    return res.render('./articles_partials/list', {articles: data});
  })
  .catch((errorMsg) => {
   res.json(errorMsg);
@@ -68,9 +69,7 @@ router.put('/:id/edit', (req,res) => {
   }).catch((error) => {
     console.log(error, ' HELPE HELP ERROROROROR DANGER!!! IN ARTICLES> JS LINE 38 ');
   });
-});
-
-
+});""
 
 
 module.exports = router;
