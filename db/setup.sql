@@ -20,11 +20,26 @@ CREATE TABLE IF NOT EXISTS articles
 -- making title index
 CREATE INDEX IF NOT EXISTS title_idx ON articles (title);
 
-CREATE TABLE IF NOT EXISTS products(
+CREATE TABLE IF NOT EXISTS products
+(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   price MONEY NOT NULL,
   inventory INT NOT NULL,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT now(),
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT now(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(methodOverride('_method',{ methods: ['POST', 'GET']}));
+app.use(methodOverride('_method', { methods: ['POST', 'GET']}));
 app.get('/', (req, res) =>{
   res.render('home');
 });
