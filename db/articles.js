@@ -24,22 +24,32 @@ class Articles {
   }
 
 //selecting from $1 where it = title
-  find(title){
-    return db.one('SELECT * FROM articles WHERE VALUES = $1', [true]);
+  find(id){
+    let query = 'SELECT * FROM articles WHERE id = $1';
+     return db.one(query, id);
   }
 //get all articles
   findAll(){
     // return allArticles
-    return db.any('SELECT * FROM articles');
+    return db.any('SELECT * FROM articles'); 
   }
 //update for put method 
-  update() {
-    return db.none('UPDATE articles SET title=$1, author=$2, content=$3 WHERE title = $1').catch((error) => {
+  update(id, objBody) {
+
+    console.log('the UPDAT FUNCTION IS RUNNING on LINE 38 in ARTICLES.JS');
+
+    let title = objBody.title;
+    let author = objBody.author;
+    let content = objBody.content;
+    console.log(objBody, "this is content");
+    let query = "UPDATE articles SET title = $1, author = $2, content = $3 WHERE id = $4";
+    let params =  [title, author, content, id];
+    console.log(content, "this is content");
+
+    return db.any(query, params)
+    .catch((error) => {
       console.log(error, ' THIS IS THE ERROR MSG IN ARTICLES DB LINE 30');
     });
-  }
-  delete() {
-
   }
 } 
 module.exports = Articles;
