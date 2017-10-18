@@ -84,7 +84,7 @@ Inside of your templates directory you should have the templates below in a dire
       - **title** is a unique identifier for this item.
       - **urlTitle** is similar to the **title** that was passed in but instead is a URL Encoded version. *Javascript has a native way to url-encode strings*.
         **example:** If given a title of `"The Best Magpie Developer of 2016"`, it's url-encoded equivilent is `"The%20Best%20Magpie%20Developer%20of%202016"`.
-    - If **successful** then redirect the user back to the `/articles` route.
+    - If **successful** then redirect the user back to the `/articles` route.s
     - If not **successful** then send the user back to the **new** article route, `/articles/new` and some way to communicate the error back to the user via templating.
 
 `/articles/:title`

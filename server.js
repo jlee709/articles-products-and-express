@@ -11,7 +11,6 @@ const products = require('./routes/products');
 const pgp = require('pg-promise')();
 const methodOverride = require('method-override');
 
-
 // handle bars 
 let hbs = exhbs.create({
   extname: '.hbs',
@@ -28,10 +27,6 @@ app.use(bodyParser.urlencoded({
 
 app.use(methodOverride('_method'));
 app.use('/articles', articles);
-
-
-
-
 
 
 //port server end 

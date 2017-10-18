@@ -20,20 +20,25 @@ router.get('/' , (req,res) => {
  });
 });
 
-//Article create
-// router.post('/new', (req,res) => {
-//   return articles.create()
-//   .then((newArticle) => {
-//     return res.json(newArticle);
-//   });
-// });
+// Article create
 
-// app.put('/edit', (req,res) => {
-//   return articles.update()
-//   .then((newArticle) => {
-//     return res.json(updateArticle);
-//   });
-// });
+router.post('/new', (req,res) => {
+  console.log(req.body);
+  return articles.create(req.body)
+  .then((newArticle) => {
+    return res.json(newArticle);
+  });
+});
+
+//UPDATE 
+router.put('/edit', (req,res) => {
+  return articles.update()
+  .then((editArticle) => {
+    return res.json(editArticle);
+  }).catch((error) => {
+    console.log(error, ' HELPE HELP ERROROROROR DANGER!!! IN ARTICLES> JS LINE 38 ');
+  });
+});
 
 // app.delete('/Article/:id', (req,res) => {
 //   return articles.delete()
