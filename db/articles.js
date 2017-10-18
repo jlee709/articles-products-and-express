@@ -51,6 +51,15 @@ class Articles {
       console.log(error, ' THIS IS THE ERROR MSG IN ARTICLES DB LINE 30');
     });
   }
+  delete(id){
+    console.log('delete METHOD operationsal');
+    let query = "DELETE FROM articles WHERE id = $1";
+    console.log(id, "< ----- This should be the ID");
+
+    //needs to be in arry bcz $1 looks for arry idx
+    let params = [id];
+    return db.any(query, params);
+  }
 } 
 module.exports = Articles;
 

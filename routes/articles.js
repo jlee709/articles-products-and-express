@@ -49,6 +49,15 @@ router.get('/:id/edit', (req, res) =>{
   });
 });
 
+router.delete('/:id/edit', (req,res) => {
+  console.log("delete ROUTE is runnning");
+  let id = req.params.id;
+  return Articles.delete(id)
+  .then((data) => {
+    return res.json(data);
+  });
+});
+
 router.put('/:id/edit', (req,res) => {
   console.log('The Out Route Has Been Invoked!!!!');
   let id =req.params.id;
@@ -61,12 +70,6 @@ router.put('/:id/edit', (req,res) => {
   });
 });
 
-// app.delete('/Article/:id', (req,res) => {
-//   return articles.delete()
-//   .then((newArticle) => {
-//     return splice(article.id , 1);
-//   });
-// });
 
 
 
